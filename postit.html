@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Posting</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="postit.css">
+</head>
+<body>
+    <main class="container">
+
+        <h1>Social Media Posting</h1>
+        <p>USING THE AES 192 (Symmetric Encryption/Decryption)</p><br>
+
+
+        <div class="box" id="userSection">
+            <h2>User Information</h2>
+
+            <label for="userName">Full Name</label>
+            <input id="userName" type="text">
+            <br>
+
+            <label for="bdate">Date of Birth</label>
+            <input id="bdate" type="date">
+            <br>
+
+            <label for="yearLevel">Year Level</label>
+            <input id="yearLevel" type="text">
+            <br>
+
+            <label for="gender">Gender</label>
+            <input id="gender" type="text">
+            <br>
+
+            <label for="username">Username</label>
+            <input id="username" type="text">
+            <br>
+
+            <label for="password">Password</label>
+            <input id="password" type="password">
+            <br>
+
+            <button class="btn" onclick="saveUser()">Continue</button>
+            <p id="userMessage"></p>
+        </div>
+
+
+        <div class="box hidden" id="postSection">
+            <h2>Write a Post</h2>
+            <textarea id="postText" rows="5" placeholder="Write your caption here..."></textarea>
+            <br>
+
+            <button class="btn" onclick="addPost()">Post</button>
+            <p id="postMessage"></p>
+        </div>
+
+
+        <div id="thread"></div>
+
+    </main>
+
+    <script src="postit.js"></script>
+</body>
+</html>
